@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bolisouth Losavath - IT Support Specialist CV</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <style>
+    /* --- WEB LAYER STYLES --- */
+    :root {
+      --primary-color: #1a365d;
+      --secondary-color: #2b6cb0;
+      --accent-color: #3182ce;
+      --text-color: #2d3748;
+      --bg-light: #f7fafc;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #edf2f7;
+      color: var(--text-color);
+      line-height: 1.6;
+      padding: 20px;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+      background: #fff;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    header.hero {
+      background: linear-gradient(135deg, #1a365d 0%, #2b6cb0 100%);
+      color: white;
+      text-align: center;
+      padding: 40px 20px;
+    }
+
+    .profile-img {
+      width: 130px;
+      height: 130px;
+      border-radius: 50%;
+      border: 4px solid white;
+      object-fit: cover;
+      margin-bottom: 15px;
+    }
+
+    header h1 {
+      font-size: 2.2rem;
+      letter-spacing: 1px;
+      margin-bottom: 5px;
+    }
+
+    header .title {
+      font-size: 1.2rem;
+      color: #e2e8f0;
+      font-weight: 500;
+      margin-bottom: 15px;
+    }
+
+    .contact-info {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      font-size: 0.95rem;
+    }
+
+    .contact-info span, .contact-info a {
+      color: white;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    .print-btn {
+      background-color: #ebf8ff;
+      color: var(--secondary-color);
+      border: none;
+      padding: 10px 24px;
+      font-size: 0.95rem;
+      font-weight: 600;
+      border-radius: 20px;
+      cursor: pointer;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      transition: all 0.2s ease;
+      font-family: 'Poppins', sans-serif;
+      margin-top: 20px;
+    }
+
+    .print-btn:hover {
+      background-color: #bee3f8;
+      transform: translateY(-2px);
+    }
+
+    .main-layout {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 30px;
+      padding: 40px;
+    }
+
+    .section-title {
+      font-size: 1.3rem;
+      color: var(--primary-color);
+      border-bottom: 2px solid #e2e8f0;
+      padding-bottom: 5px;
+      margin-bottom: 15px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      font-weight: 600;
+    }
+
+    .profile-text {
+      color: #4a5568;
+      text-align: justify;
+      font-size: 0.95rem;
+    }
+
+    .info-item {
+      margin-bottom: 25px;
+    }
+
+    .info-item h3 {
+      font-size: 1.15rem;
+      color: #2d3748;
+    }
+
+    .info-item .meta-line {
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.9rem;
+      color: var(--secondary-color);
+      margin-bottom: 10px;
+      font-weight: 500;
+    }
+
+    ul {
+      list-style-position: outside;
+      padding-left: 20px;
+      color: #4a5568;
+    }
+
+    ul li {
+      margin-bottom: 6px;
+      font-size: 0.95rem;
+    }
+
+    .skills-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+      gap: 12px;
+    }
+
+    .skill-badge {
+      background: var(--bg-light);
+      padding: 10px 15px;
+      border-radius: 6px;
+      font-size: 0.9rem;
+      font-weight: 500;
+      border-left: 4px solid var(--accent-color);
+      color: #2d3748;
+    }
+
+    .two-col-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 30px;
+    }
+
+    @media (max-width: 768px) {
+      .two-col-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* --- PRINT LAYER STYLES --- */
+    @media print {
+      body {
+        background: #fff !important;
+        color: #000 !important;
+        padding: 0 !important;
+        font-size: 10.5pt !important;
+      }
+      .container {
+        box-shadow: none !important;
+        border-radius: 0 !important;
+        max-width: 100% !important;
+        margin: 0 !important;
+      }
+      .print-btn, .print-btn-container {
+        display: none !important;
+      }
+      header.hero {
+        background: transparent !important;
+        color: #000 !important;
+        border-bottom: 2px solid #2d3748 !important;
+        padding: 10px 0 20px 0 !important;
+      }
+      header h1 {
+        color: #000 !important;
+        font-size: 24pt !important;
+      }
+      header .title {
+        color: #2b6cb0 !important;
+        font-size: 13pt !important;
+        font-weight: 600 !important;
+      }
+      .contact-info span, .contact-info a {
+        color: #333 !important;
+        font-size: 10pt !important;
+      }
+      .main-layout {
+        padding: 20px 0 !important;
+        gap: 20px !important;
+      }
+      .section-title {
+        color: #1a202c !important;
+        border-bottom: 1.5px solid #1a202c !important;
+        font-size: 12pt !important;
+        margin-top: 10px !important;
+        margin-bottom: 10px !important;
+      }
+      .skill-badge {
+        background: transparent !important;
+        border: 1px solid #cbd5e0 !important;
+        border-left: 3px solid #2b6cb0 !important;
+        padding: 6px 10px !important;
+        font-size: 9.5pt !important;
+      }
+      .info-item, section {
+        page-break-inside: avoid !important;
+        break-inside: avoid !important;
+      }
+      @page {
+        size: A4;
+        margin: 1.2cm;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    
+    <!-- Header Section -->
+    <header class="hero">
+      <img src="image_1.png" alt="Bolisouth Losavath" class="profile-img">
+      <h1>BOLISOUTH LOSAVATH</h1>
+      <p class="title">IT Support Specialist / System Administrator</p>
+      <div class="contact-info">
+        <span>📍 Vientiane, Laos</span>
+        <a href="mailto:lorsawathlee@gmail.com">📧 lorsawathlee@gmail.com</a>
+        <a href="tel:+8562097797762">📞 (+856) 20-9779-7762</a>
+      </div>
+      <div class="print-btn-container">
+        <button onclick="window.print()" class="print-btn">🖨️ Print / Save PDF</button>
+      </div>
+    </header>
+
+    <div class="main-layout">
+      
+      <!-- Professional Profile (Tailored for IT & AI) -->
+      <section>
+        <h2 class="section-title">Professional Summary</h2>
+        <p class="profile-text">
+          Dedicated IT Professional with over 3 years of hands-on experience in high-pressure operational environments. Expertise in hardware troubleshooting, network performance monitoring, and ensuring 24/7 system stability. Highly proficient in leveraging modern AI tools (Google Gemini, ChatGPT, Claude) to accelerate problem-solving, automate IT workflows, and optimize scripts. Uniquely equipped with strong software development skills (Python, Java, React) to bridge the gap between IT infrastructure support and enterprise system management.
+        </p>
+      </section>
+
+      <!-- Core IT & AI Skills Highlights -->
+      <section>
+        <h2 class="section-title">Core Competencies</h2>
+        <div class="skills-container">
+          <div class="skill-badge">IT Support & Helpdesk</div>
+          <div class="skill-badge">Hardware & Network Troubleshooting</div>
+          <div class="skill-badge">AI Tools (Gemini, ChatGPT, Claude)</div>
+          <div class="skill-badge">Windows Server Administration</div>
+          <div class="skill-badge">System Deployment & Maintenance</div>
+          <div class="skill-badge">Remote Desktop Support</div>
+          <div class="skill-badge">Infrastructure & Electrical Systems</div>
+          <div class="skill-badge">Python Scripting & Automation</div>
+          <div class="skill-badge">Database Management (MySQL)</div>
+          <div class="skill-badge">Git & Version Control</div>
+        </div>
+      </section>
+
+      <!-- Work Experience -->
+      <section>
+        <h2 class="section-title">Professional Experience</h2>
+
+        <!-- Current Job: Focus on Deployment & Support -->
+        <div class="info-item">
+          <h3>Epoch Toy Laos | Vientiane, Laos</h3>
+          <div class="meta-line">
+            <span>IT Operations & Software Developer, PMC Unit</span>
+            <span>January 21, 2026 – Present</span>
+          </div>
+          <ul>
+            <li><strong>System Deployment & IT Support:</strong> Successfully deployed a Real-Time Packing System on the factory floor, configuring hardware terminals, ensuring stable network connectivity, and providing ongoing technical support.</li>
+            <li><strong>User Training & Documentation:</strong> Created standardized "Quick Manuals" and conducted hands-on training for factory line workers, facilitating smooth adoption of digital tools.</li>
+            <li><strong>AI-Assisted Optimization:</strong> Utilized AI platforms (Gemini, ChatGPT) to rapidly debug code, optimize database queries, and streamline IT support workflows.</li>
+            <li><strong>Enterprise System Maintenance:</strong> Managed and integrated the Bill of Materials (BOM) module within a large-scale ERP system to enhance operational efficiency.</li>
+          </ul>
+        </div>
+        
+        <!-- Previous Job: Heavy IT Support -->
+        <div class="info-item">
+          <h3>Icute Crypto Mining | Vientiane, Laos</h3>
+          <div class="meta-line">
+            <span>IT Support & Network Technician</span>
+            <span>September 2022 – January 2026</span>
+          </div>
+          <ul>
+            <li><strong>Helpdesk & User Support:</strong> Provided comprehensive tier 1 and tier 2 technical support for hardware and software issues, ensuring minimal downtime for critical operations.</li>
+            <li><strong>Hardware Maintenance & Assembly:</strong> Diagnosed, repaired, and assembled complex computer systems and cryptocurrency mining rigs (ASIC/GPU), significantly reducing hardware replacement costs.</li>
+            <li><strong>Network & System Monitoring:</strong> Monitored 24/7 network stability, analyzed daily performance metrics, and optimized systems for maximum operational efficiency.</li>
+            <li><strong>Infrastructure Management:</strong> Supervised critical facility infrastructure, including electrical systems (Voltage/Current) and factory cooling management.</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Education & Languages -->
+      <div class="two-col-grid">
+        <section>
+          <h2 class="section-title">Education</h2>
+          <div class="info-item" style="margin-bottom: 15px;">
+            <h3 style="font-size: 1.05rem;">Vocational BCT College</h3>
+            <div class="meta-line" style="margin-bottom: 2px;">
+              <span>Diploma in I.T. Education</span>
+              <span>2022</span>
+            </div>
+            <p style="font-size: 0.85rem; color: #4a5568;">Focus: Network Basics, Database Systems, Software Development.</p>
+          </div>
+          <div class="info-item">
+            <h3 style="font-size: 1.05rem;">Thasun High School</h3>
+            <div class="meta-line">
+              <span>High School Diploma</span>
+              <span>2019</span>
+            </div>
+          </div>
+        </section>
+
+        <section>
+          <h2 class="section-title">Languages</h2>
+          <ul>
+            <li><strong>Lao:</strong> Native</li>
+            <li><strong>Thai:</strong> Fluent (Professional Working Proficiency)</li>
+            <li><strong>English:</strong> Intermediate (Technical Reading/Support)</li>
+            <li><strong>Chinese:</strong> Basic (Conversational)</li>
+          </ul>
+        </section>
+      </div>
+
+    </div>
+  </div>
+
+</body>
+</html>
